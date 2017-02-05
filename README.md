@@ -50,7 +50,21 @@ ExecStart=/usr/bin/dockerd -H fd:// -H 127.0.0.1:55555
 
 ### Usage
 
+Here is the default configuration
+```
+unrlab {
+    docker {
+        host = "http://127.0.0.1:55555"
+        version = "1.25"
+    }
+}
+```
+
+Add these lines to your configuration and feel free to update the host or version in order to adapt them to your needs.
+
 #### Mysql
+
+There is a helper for mysql container, but your can start other containers without the need of the helper.
 
 ##### With the Helper
 
