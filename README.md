@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jguido/docker-scala.svg?branch=master)](https://travis-ci.org/jguido/docker-scala)
+
 ## Scala docker client
 
 Docker client written at first for testing purpose, for database migration managed by flyway and for avoiding issues on the creation or modification of tables.
