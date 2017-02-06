@@ -2,8 +2,8 @@ language: scala
 
 scala:
    - 2.11.8
-   - 2.12.0
-   - 2.12.1
+#   - 2.12.0
+#   - 2.12.1
 
 sudo: required
 
@@ -13,4 +13,6 @@ services:
 before_install:
     - docker info
     - sudo service docker stop
-    - docker info
+    - sudo echo 'DOCKER_OPTS="-H 127.0.0.1:55555"' | sudo tee /etc/default/docker
+    - sudo service docker start
+    - sudo cat /etc/default/docker
