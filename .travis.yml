@@ -15,3 +15,4 @@ before_install:
     - sudo echo 'DOCKER_OPTS="-H 127.0.0.1:55555"' | sudo tee /etc/default/docker
     - sudo service docker start
     - sudo cat /etc/default/docker
+    - sudo docker pull mysql:5.5
