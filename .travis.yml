@@ -17,4 +17,4 @@ before_install:
     - sudo service docker status
     - sudo cat /etc/default/docker
     - sudo docker pull mysql:5.6
-    - sudo docker hello-world
+    - sudo docker pull hello-world
