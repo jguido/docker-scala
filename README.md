@@ -32,7 +32,7 @@ This will copy the jar to your local ivy2 folder (~/.ivy2/local/)
 5. Add 
 ```
 ExecStart=
-ExecStart=/usr/bin/dockerd -H fd:// -H 127.0.0.1:55555
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375 -H unix:///var/run/docker.sock
 ```
 6. Reload daemon
 ```sudo systemctl daemon-reload```
@@ -46,7 +46,7 @@ ExecStart=/usr/bin/dockerd -H fd:// -H 127.0.0.1:55555
 2. Edit the default docker conf
 ```sudo vim /etc/default/docker```
 3. Add the host of your desired daemon on the DOCKER_OPTS line
-```DOCKER_OPTS="-H 127.0.0.1:55555"```
+```DOCKER_OPTS="-H tcp://127.0.0.1:2375 -H unix:///var/run/docker.sock"```
 4. Start the docker daemon
 ```sudo service docker start```
 

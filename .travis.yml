@@ -12,8 +12,7 @@ services:
 
 before_install:
     - sudo service docker stop
-    - sudo cat /etc/default/docker
-    - sudo echo 'DOCKER_OPTS="-H 127.0.0.1:55555"' | sudo tee /etc/default/docker
+    - sudo echo 'DOCKER_OPTS="-H tcp://127.0.0.1:2375 -H unix:///var/run/docker.sock"' | sudo tee /etc/default/docker
     - sudo service docker start
     - sudo service docker status
     - sudo cat /etc/default/docker
